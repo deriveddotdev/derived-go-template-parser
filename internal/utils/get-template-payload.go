@@ -1,6 +1,6 @@
 package utils
 
-import "github.com/deriveddotdev/derived-go-template-parser/models"
+import "github.com/deriveddotdev/derived-go-template-parser/internal/models"
 
 // GetResolvePayload processes a template array and identifies duplicate paths
 func GetResolvePayload(templateArray []models.TemplateInput) []models.Template {

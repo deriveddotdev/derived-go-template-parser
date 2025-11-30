@@ -2,7 +2,7 @@ package resolvers
 
 import (
 	"github.com/deriveddotdev/derived-go-template-parser/internal/core"
-	"github.com/deriveddotdev/derived-go-template-parser/models"
+	"github.com/deriveddotdev/derived-go-template-parser/internal/models"
 )
 
 func ResolvePathList(path []models.Path, data interface{}) models.ResolvePathResponse {

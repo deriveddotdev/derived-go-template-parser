@@ -4,7 +4,7 @@ import (
 	"regexp"
 
 	"github.com/deriveddotdev/derived-go-template-parser/internal/core"
-	"github.com/deriveddotdev/derived-go-template-parser/models"
+	"github.com/deriveddotdev/derived-go-template-parser/internal/models"
 )
 
 func ResolveTemplate(template string, data interface{}) models.SingleTemplateResolvedResponse {

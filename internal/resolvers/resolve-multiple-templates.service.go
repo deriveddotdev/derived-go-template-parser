@@ -7,8 +7,8 @@ import (
 	"strings"
 
 	"github.com/deriveddotdev/derived-go-template-parser/internal/core"
+	"github.com/deriveddotdev/derived-go-template-parser/internal/models"
 	"github.com/deriveddotdev/derived-go-template-parser/internal/utils"
-	"github.com/deriveddotdev/derived-go-template-parser/models"
 )
 
 type ModifyResult struct {
