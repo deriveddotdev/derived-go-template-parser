@@ -15,6 +15,18 @@ type TemplateInput struct {
 	Enabled      string `json:"enabled"`
 }
 
-func ResolveMultipleTemplates(templatesInput []models.TemplateInput, data interface{}) models.ResolveTemplatesResponse {
-	return resolvers.ResolveMultipleTemplates(templatesInput, data)
+func ResolveMultipleTemplates(templatesInput []TemplateInput, data interface{}) models.ResolveTemplatesResponse {
+	internalInputs := make([]models.TemplateInput, len(templatesInput))
+	for i, t := range templatesInput {
+		internalInputs[i] = models.TemplateInput{
+			ID:           t.ID,
+			Template:     t.Template,
+			Path:         t.Path,
+			TemplateType: t.TemplateType,
+			Pattern:      t.Pattern,
+			FileContent:  t.FileContent,
+			Enabled:      t.Enabled,
+		}
+	}
+	return resolvers.ResolveMultipleTemplates(internalInputs, data)
 }
