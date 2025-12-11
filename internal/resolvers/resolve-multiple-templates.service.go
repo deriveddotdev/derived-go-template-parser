@@ -40,6 +40,7 @@ func handleDistinctPaths(template models.Template, data interface{}) models.Reso
 	resolvedEnabled, enabledErr := core.ResolveTemplateString(template.Enabled, data)
 	result := models.ResolvedTemplate{
 		ID:                  template.ID,
+		Template:            template.Template,
 		ResolvedTemplate:    resolvedTemplate,
 		ResolvedPath:        resolvedPath,
 		Path:                template.Path,
@@ -76,6 +77,7 @@ func handleDuplicatePaths(template models.Template, data interface{}) models.Res
 	resolvedPath, pathErr := core.ResolveTemplateString(template.Path, data)
 	result := models.ResolvedTemplate{
 		ID:                  template.ID,
+		Template:            template.Template,
 		ResolvedTemplate:    "",
 		ResolvedPath:        resolvedPath,
 		Path:                template.Path,
